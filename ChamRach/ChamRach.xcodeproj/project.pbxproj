@@ -14,6 +14,9 @@
 		E3BDC3DE2098C92A00564CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BDC3DC2098C92A00564CF1 /* LaunchScreen.storyboard */; };
 		E3BDC3E12098C92A00564CF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BDC3E02098C92A00564CF1 /* main.m */; };
 		E3BDC3EB2098C92A00564CF1 /* ChamRachTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BDC3EA2098C92A00564CF1 /* ChamRachTests.m */; };
+		E3BDC4292098D36900564CF1 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BDC4272098CFEB00564CF1 /* GPUImage.framework */; };
+		E3BDC42A2098D3EB00564CF1 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BDC4272098CFEB00564CF1 /* GPUImage.framework */; };
+		E3BDC42B2098D3EB00564CF1 /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3BDC4272098CFEB00564CF1 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,28 @@
 			remoteGlobalIDString = BCE209E51943F20C002FEED8;
 			remoteInfo = GPUImageFramework;
 		};
+		E3BDC42C2098D3EB00564CF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3BDC41E2098CFEB00564CF1 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE209E41943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3BDC42E2098D3EC00564CF1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E3BDC42B2098D3EB00564CF1 /* GPUImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E3BDC3CE2098C92700564CF1 /* ChamRach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChamRach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BDC4292098D36900564CF1 /* GPUImage.framework in Frameworks */,
+				E3BDC42A2098D3EB00564CF1 /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +108,7 @@
 				E3BDC3E92098C92A00564CF1 /* ChamRachTests */,
 				E3BDC3CF2098C92700564CF1 /* Products */,
 				E3BDC3FF2098CFA400564CF1 /* Submodules */,
+				E3BDC4282098D36900564CF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +163,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E3BDC4282098D36900564CF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +180,12 @@
 				E3BDC3CA2098C92700564CF1 /* Sources */,
 				E3BDC3CB2098C92700564CF1 /* Frameworks */,
 				E3BDC3CC2098C92700564CF1 /* Resources */,
+				E3BDC42E2098D3EC00564CF1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E3BDC42D2098D3EB00564CF1 /* PBXTargetDependency */,
 			);
 			name = ChamRach;
 			productName = ChamRach;
@@ -280,6 +316,11 @@
 			isa = PBXTargetDependency;
 			target = E3BDC3CD2098C92700564CF1 /* ChamRach */;
 			targetProxy = E3BDC3E72098C92A00564CF1 /* PBXContainerItemProxy */;
+		};
+		E3BDC42D2098D3EB00564CF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImageFramework;
+			targetProxy = E3BDC42C2098D3EB00564CF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

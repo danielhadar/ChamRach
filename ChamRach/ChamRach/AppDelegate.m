@@ -15,6 +15,8 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window.rootViewController = [[MainViewController alloc] init];
+  self.window.rootViewController.view.frame = [[UIScreen mainScreen] bounds];
+  
   return YES;
 }
 
